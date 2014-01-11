@@ -1,27 +1,15 @@
 var config = {
     local: {
         mode: 'local',
-        port: 3000,
-        database : {
-            host : 127.0.0.1,
-            database : 'test'
-        }
+        port: 3000
     },
     production: {
         mode: 'production',
-        port: process.env.PORT,
-        database : {
-            host : 127.0.0.2,
-            database : 'production'
-        }
+        port: process.env.PORT
     },
     staging: {
         mode: 'staging',
-        port: 1000,
-        database : {
-            host : 127.0.0.3,
-            database : 'staging'
-        }
+        port: 1000
     }
 }
 
