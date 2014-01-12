@@ -1,3 +1,4 @@
+/*jslint devel: true, node: true, eqeq: true, nomen: true */
 
 /**
  * Module dependencies.
