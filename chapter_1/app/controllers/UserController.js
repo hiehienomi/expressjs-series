@@ -1,6 +1,6 @@
 module.exports.controller = function (app) {
   app.get('/users/login', function (req, res) {
-    console.log('get user/login');
+    console.log('get user/aloalo');
     res.render('users/login');
   });
 

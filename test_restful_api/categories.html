@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+
+            <a href="#" class="navbar-brand">TEST API</a>
+
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navHeaderCollapse">
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">List Test
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#contact" data-toggle="modal">Categories</a>
+                            </li>
+                            <li>
+                                <a href="#">Users</a>
+                            </li>
+                        </ul>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active" id="getList" >
+                        <h4 class="list-group-item-heading">Get List</h4>
+                        <p class="list-group-item-text">/api/cate</p>
+                    </a>
+                    <a href="#" class="list-group-item" id="getNew">
+                        <h4 class="list-group-item-heading">New - Create</h4>
+                        <p class="list-group-item-text">/api/cate/new
+                            <br/>/api/cate/create</p>
+                    </a>
+                    <a href="#" class="list-group-item" id="getShow">
+                        <h4 class="list-group-item-heading">Show</h4>
+                        <p class="list-group-item-text">/api/cate/:id</p>
+                    </a>
+                    <a href="#" class="list-group-item" id="getEdit">
+                        <h4 class="list-group-item-heading">Edit - Update</h4>
+                        <p class="list-group-item-text">/api/cate/:id/edit
+                            <br/>/api/cate/:id</p>
+                    </a>
+                    <a href="#" class="list-group-item" id="getDel">
+                        <h4 class="list-group-item-heading">Destroy</h4>
+                        <p class="list-group-item-text">/api/cate</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-7">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#formNew').fadeOut();
+            $('#getList').click(function() {
+                $('#formNew').fadeIn();
+            });
+            $('#formNew').submit(function() {
+                $.ajax({
+                    type: "GET",
+                    url: 'http://localhost:3000/api/cate',
+                    success: function(data, textStatus, jqXHR) {
+                        console.log("Post resposne:");
+                        console.dir(data);
+                        console.log(textStatus);
+                        console.dir(jqXHR);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

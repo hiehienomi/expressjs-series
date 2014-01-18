@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\bin\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\bin\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'adduser' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose node symlink D:\bin\nodejs\\node.exe
+5 warn Password passwords cannot contain these characters: '!:@"
+6 warn Password passwords cannot contain these characters: '!:@"
+7 error Error: default value must be string or number
+7 error     at read (D:\bin\nodejs\node_modules\npm\node_modules\read\lib\read.js:15:11)
+7 error     at readEmail (D:\bin\nodejs\node_modules\npm\lib\adduser.js:96:3)
+7 error     at loop (D:\bin\nodejs\node_modules\npm\lib\adduser.js:33:20)
+7 error     at D:\bin\nodejs\node_modules\npm\lib\adduser.js:89:5
+7 error     at Interface.onLine (D:\bin\nodejs\node_modules\npm\node_modules\read\lib\read.js:111:5)
+7 error     at Interface.EventEmitter.emit (events.js:95:17)
+7 error     at Interface._onLine (readline.js:202:10)
+7 error     at Interface._line (readline.js:531:8)
+7 error     at Interface._ttyWrite (readline.js:760:14)
+7 error     at ReadStream.onkeypress (readline.js:99:10)
+8 error If you need help, you may report this *entire* log,
+8 error including the npm and node versions, at:
+8 error     <http://github.com/isaacs/npm/issues>
+9 error System Windows_NT 6.2.9200
+10 error command "D:\\bin\\nodejs\\\\node.exe" "D:\\bin\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "adduser"
+11 error cwd D:\www\expressjs-series\chapter_1
+12 error node -v v0.10.24
+13 error npm -v 1.3.21
+14 verbose exit [ 1, true ]

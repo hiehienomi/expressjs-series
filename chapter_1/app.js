@@ -5,8 +5,6 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var config = require('./config')();
@@ -31,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // dynamically include routes (Controller)
 fs.readdirSync('./app/controllers').forEach(function (file) {
     if (file.substr(-3) == '.js') {
-        route = require('./app/controllers/' + file);
+        var route = require('./app/controllers/' + file);
         route.controller(app);
     }
 });
